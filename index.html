@@ -129,11 +129,38 @@
     <article class="modal-dialog modal-lg">
         <article class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Adicionar Mensualidad</h5>
+                <h5 class="modal-title">Nueva Mensualidad</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
+                <form id="frm-mensualidad" action="">
+                    <article class="card">
+                        <div class="card-header">
+                            Datos de Propietario
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="nombre-propietario">Nombre (*)</label>
+                                        <input type="text" id="nombre-propietario" class="form-control" placeholder="Nombre del Propietario" required>
 
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="documento-propietario">Documento (*)</label>
+                                        <input type="text" id="documento-propietario" class="form-control" placeholder="Documento del Propietario" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                            </div>
+                        </div>
+                    </article>
+
+                </form>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-primary" type="button" id="btn-guardar-mensualidad-inmueble">Guardar</button>
@@ -154,5 +181,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+        <script src="./js/main.js"></script>
 </body>
 </html>
