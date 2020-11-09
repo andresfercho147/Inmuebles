@@ -7,6 +7,7 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Proyectos de inmuebles</title>
 </head>
 <body>
@@ -67,14 +68,83 @@
                     </ul>
                 </div>
                 <div class="card-body">
-                    <div class="tab-content" id="mis-tabs">
-
+                    <div class="tab-content" id="content-tab">
+                        <div class="tab-pane fad show active" id="crear-mensualidad-content" role="tabpanel">
+                            <article class="row">
+                                <div class="col-10">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="fas fa-search-plus"></i>
+                                            </div>
+                                        </div>   
+                                            <input type="search" placeholder="Filtrar" class="form-control" aria-label="Search" > 
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn btn-info" type="button" id="btn-filtrar"><i class="fas fa-search-plus"></i></button>
+                                    <button class="btn btn-info" type="button" id="btn-adicionar" data-toggle="modal" data-target="#modal-mensualidad"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </article>
+                            <article class="row mt-3">
+                                <div class="col-12">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Edad</th>
+                                                <th>Género</th>
+                                                <th>Total a Pagar</th>
+                                                <th>Fecha de Mensualidad</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Carlos</td>
+                                                <td>28 años</td>
+                                                <td>Masculino</td>
+                                                <td>$280.000</td>
+                                                <td>2020-05-10</td>
+                                                <td>
+                                                    <a href="" class="btn btn-link">Ver</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="tab-pane fad" id="ver-estadistica-content" role="tabpanel">Crear Mensualidad
+                            Estadistica
+                        </div>
                     </div>
                 </div>
 
             </article>
         </section>
     </main>
+
+<section class="modal fade" id="modal-mensualidad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <article class="modal-dialog modal-lg">
+        <article class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Adicionar Mensualidad</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" id="btn-guardar-mensualidad-inmueble">Guardar</button>
+                <button class="btn btn-danger" type="button" data-dismiss="modal">Salir</button>
+
+            </div>
+
+        </article>
+    </article>
+</section>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
